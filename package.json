@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "author": "Zerops <dev@zerops.io>",
   "dependencies": {
-    "prerender" "5.21.1"
+    "prerender": "5.21.1"
   }
 }
