@@ -1,0 +1,18 @@
+zerops:
+  - setup: prerender
+    build:
+      base: nodejs@20
+      buildCommands:
+        - npm install
+      deploy:
+        - node_modules
+        - package.json
+        - server.js
+    run:
+      base: nodejs@20
+      envVariables:
+        NODE_ENV: production
+      ports:
+        - port: 3000
+          httpSupport: true
+      start: node server.js
