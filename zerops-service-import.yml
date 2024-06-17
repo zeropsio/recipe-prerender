@@ -1,1 +1,5 @@
-
+services:
+  - hostname: prerender
+    type: nodejs@20
+    buildFromGit: https://github.com/zeropsio/recipe-prerender
+    enableSubdomainAccess: true
