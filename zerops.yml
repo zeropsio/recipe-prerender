@@ -10,6 +10,11 @@ zerops:
         - server.js
     run:
       base: nodejs@20
+      os: ubuntu
+      prepareCommands:
+        - sudo apt install -y wget fonts-liberation xdg-utils software-properties-common
+        - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        - sudo dpkg -i google-chrome-stable_current_amd64.deb
       envVariables:
         NODE_ENV: production
       ports:
