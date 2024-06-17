@@ -11,7 +11,7 @@ zerops:
       base: nodejs@20
       prepareCommands:
         - zsc scale ram max 10m
-        - sleep 10
+        - sleep 30
         - apk add --update-cache chromium
         - rm -rf /var/cache/apk/* /tmp/*
       envVariables:
