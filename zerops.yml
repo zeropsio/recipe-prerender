@@ -16,6 +16,7 @@ zerops:
         - rm -rf /var/cache/apk/* /tmp/*
       envVariables:
         NODE_ENV: production
+        MEMORY_CACHE: 1
       ports:
         - port: 3000
           httpSupport: true
