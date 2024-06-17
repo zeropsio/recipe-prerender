@@ -10,7 +10,8 @@ zerops:
     run:
       base: nodejs@20
       prepareCommands:
-        - apk add --update-cache chromium tini && rm -rf /var/cache/apk/* /tmp/*
+        - apk add --update-cache chromium
+        - rm -rf /var/cache/apk/* /tmp/*
       envVariables:
         NODE_ENV: production
       ports:
