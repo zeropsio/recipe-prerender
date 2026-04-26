@@ -1,21 +1,17 @@
 zerops:
   - setup: prerender
     build:
-      base: nodejs@20
+      base: go@latest
       buildCommands:
-        - npm i
+        - go build -o main main.go
       deploy:
-        - node_modules
-        - server.js
+        - main
     run:
-      base: nodejs@20
+      base: alpine@latest
       prepareCommands:
         - sudo apk add --update-cache chromium
         - sudo rm -rf /var/cache/apk/* /tmp/*
-      envVariables:
-        NODE_ENV: production
-        MEMORY_CACHE: 1
       ports:
-        - port: 3000
+        - port: 8080
           httpSupport: true
-      start: node server.js
+      start: ./main
